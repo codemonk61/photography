@@ -1,0 +1,259 @@
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    height:550px;
+}
+
+/* navbar start */
+#check,
+.btn {
+    display: none;
+}
+
+nav {
+
+    background-color:#ff754b;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.logo img {
+    height: 65px;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.links li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+/* navbar end */
+
+/* slider */
+.slider {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    height: 500px;
+    z-index: -1;
+    animation: slide 15s ease-out infinite;
+
+}
+
+@keyframes slide {
+    0% {
+        background-image: url('1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    25% {
+        background-image: url('2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    50% {
+        background-image: url('3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    75% {
+        background-image: url('4.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    100% {
+        background-image: url('5.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+.overlay{
+    height: inherit;
+background-color: rgba(0,0,0,0.5);
+}
+.content {
+    width: 60%;
+    margin-left:100px;
+    padding-top:130px;
+}
+.content p{
+    color:aliceblue;
+    font-size:20px;
+}
+.content a{
+    display: inline-block;
+    padding: 15px 18px;
+    background-color: #ff754b;
+    text-decoration:none;
+    color:aliceblue;
+    border-radius: 5px;
+}
+/* slider end */
+
+/* our work  */
+.heading{
+    height:200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+.work-box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+.box{
+    width:350px;
+    margin-top: 20px;
+    border:1px solid black;
+    padding: 10px;
+}
+.box img{
+    width: 100%;
+    height: 300px;
+}
+.box p,a{
+    margin-top: 10px;
+}
+.box a{
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ff754b;
+    text-decoration:none;
+    color:aliceblue;
+    border-radius: 5px;
+
+}
+footer{
+    margin-top: 20px;
+    height:100px;
+    line-height:100px;
+    background-color: #ff754b;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.social-links{
+    height: inherit;
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+.social-links li{
+    list-style: none;
+}
+.social-links li a{
+    display: block;
+    color: #ff754b;
+    background-color: aliceblue;
+    text-decoration: none;
+    height:50px;
+    width:50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    font-size:20px;
+}
+.copyright{
+    width:40%;
+    color: aliceblue;
+    text-align: center;
+    background-color: #ff754b;
+
+    
+}
+/* for mobile  */
+@media screen and (max-width:664px) {
+
+    nav,
+    .links {
+        flex-direction: column;
+
+    }
+
+    .links {
+        transition: all 1s ease;
+        display: none;
+        text-align: center;
+    }
+
+    .links li {
+        margin: 20px 0;
+
+    }
+
+    .btn {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: aliceblue;
+        
+    }
+
+    #check:checked ~ .links {
+        display: block;
+        transition: all 1s ease;
+    }
+
+    .logo {
+
+        width: inherit;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 1px solid lightgrey;
+    }
+    .content {
+        width: 60%;
+        margin-left:40px;
+        padding-top:100px;
+    }
+    .content p{
+        color:aliceblue;
+        font-size:15px;
+    }
+    .content a{
+        display: inline-block;
+        padding: 8px 12px;
+        background-color: #ff754b;
+        text-decoration:none;
+        color:aliceblue;
+        border-radius: 5px;
+    }
+    .copyright{
+        display: none;
+    }
+    .social-links{
+        margin:auto;
+    }
+    
+}
